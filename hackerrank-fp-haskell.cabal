@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hackerrank-fp-haskell
+version:        1.0.0
+description:    Please see the README on GitHub at <https://github.com/asarkar/hackerrank-fp-haskell#readme>
+homepage:       https://github.com/asarkar/hackerrank-fp-haskell#readme
+bug-reports:    https://github.com/asarkar/hackerrank-fp-haskell/issues
+author:         Abhijit Sarkar
+maintainer:     contact@asarkar.com
+copyright:      2024 Abhijit Sarkar
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    LICENSE
+
+source-repository head
+  type: git
+  location: https://github.com/asarkar/hackerrank-fp-haskell
+
+library
+  exposed-modules:
+      Introduction.FilterArray
+      Introduction.HelloWorldN
+      Recursion.ColorSeq
+      Recursion.ConvexHull
+      Recursion.PrefixCompression
+      Recursion.StrCompression
+      Recursion.SuperDigit
+  other-modules:
+      Paths_hackerrank_fp_haskell
+  hs-source-dirs:
+      src
+  ghc-options: -XTupleSections -Werror -Weverything -Wno-missing-import-lists -Wno-missed-specializations -Wno-all-missed-specializations -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-safe-haskell-mode -Wno-safe -Wno-unsafe -Wno-implicit-prelude -Wno-prepositive-qualified-module -Wno-missing-kind-signatures -Wno-unused-top-binds -Wno-missing-export-lists
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite hackerrank-fp-haskell
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Introduction.FilterArraySpec
+      Recursion.ColorSeqSpec
+      Recursion.ConvexHullSpec
+      Recursion.PrefixCompressionSpec
+      Recursion.StrCompressionSpec
+      Recursion.SuperDigitSpec
+      SpecHook
+      Paths_hackerrank_fp_haskell
+  hs-source-dirs:
+      test
+  ghc-options: -XTupleSections -Werror -Weverything -Wno-missing-import-lists -Wno-missed-specializations -Wno-all-missed-specializations -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-safe-haskell-mode -Wno-safe -Wno-unsafe -Wno-implicit-prelude -Wno-prepositive-qualified-module -Wno-missing-kind-signatures -Wno-unused-top-binds -Wno-missing-export-lists
+  build-depends:
+      base >=4.7 && <5
+    , hackerrank-fp-haskell
+    , hspec ==2.*
+  default-language: Haskell2010
+  build-tool-depends: hspec-discover:hspec-discover == 2.*
