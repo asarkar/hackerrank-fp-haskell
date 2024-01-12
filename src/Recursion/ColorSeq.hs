@@ -1,5 +1,14 @@
 module Recursion.ColorSeq (isFullOfClr) where
 
+import qualified Control.Monad as M
+
+main :: IO ()
+main = do
+  n <- readLn :: IO Int
+  M.forM_ [1 .. n] $ \_ -> do
+    s <- getLine
+    print $ isFullOfClr s
+
 isFullOfClr :: String -> Bool
 isFullOfClr s =
   count 'R' == count 'G'

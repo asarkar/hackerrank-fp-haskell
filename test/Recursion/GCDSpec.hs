@@ -1,12 +1,12 @@
-module Recursion.SuperDigitSpec (spec) where
+module Recursion.GCDSpec (spec) where
 
 import Data.Foldable as F
-import Recursion.SuperDigit
+import Recursion.GCD
 import Test.Hspec
 
 spec :: Spec
 -- for_ :: (Foldable t, Applicative f) => t a -> (a -> f b) -> f ()
-spec = describe "calculates the super digit of the given number" $ F.for_ rowsCases rowsTest
+spec = describe "calculates the GCD of two positive integers" $ F.for_ rowsCases rowsTest
   where
     {-
     it :: (HasCallStack, Example a) => String -> a -> SpecWith (Arg a)
@@ -16,12 +16,10 @@ spec = describe "calculates the super digit of the given number" $ F.for_ rowsCa
     - a textual description of a desired behavior
     - an example for that behavior
     -}
-    rowsTest (n, k, expected) = it description assertion
+    rowsTest (n, m, expected) = it description assertion
       where
-        description = concat $ replicate (fromInteger k) (show n)
-        assertion = superDigit [n, k] `shouldBe` expected
+        description = show (n, m)
+        assertion = gcd' n m `shouldBe` expected
 
     rowsCases =
-      [ (9875, 1, 2),
-        (148, 3, 3)
-      ]
+      [(36, 63, 9 :: Int), (125, 81, 1), (221, 559, 13)]

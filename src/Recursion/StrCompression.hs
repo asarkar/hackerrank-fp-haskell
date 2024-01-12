@@ -2,6 +2,9 @@ module Recursion.StrCompression where
 
 import qualified Data.List as L
 
+main :: IO ()
+main = getLine >>= putStrLn . compress
+
 compress :: String -> String
 compress = concatMap go . L.group
   where

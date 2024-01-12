@@ -1,12 +1,12 @@
-module Recursion.StrCompressionSpec (spec) where
+module Recursion.FibonacciSpec (spec) where
 
 import Data.Foldable as F
-import Recursion.StrCompression
+import Recursion.Fibonacci
 import Test.Hspec
 
 spec :: Spec
 -- for_ :: (Foldable t, Applicative f) => t a -> (a -> f b) -> f ()
-spec = describe "creates run-length-encoding of the given string" $ F.for_ rowsCases rowsTest
+spec = describe "generates the nth Fibonacci number" $ F.for_ rowsCases rowsTest
   where
     {-
     it :: (HasCallStack, Example a) => String -> a -> SpecWith (Arg a)
@@ -16,9 +16,9 @@ spec = describe "creates run-length-encoding of the given string" $ F.for_ rowsC
     - a textual description of a desired behavior
     - an example for that behavior
     -}
-    rowsTest (s, expected) = it s assertion
+    rowsTest (n, expected) = it description assertion
       where
-        assertion = compress s `shouldBe` expected
+        description = show n
+        assertion = fib n `shouldBe` expected
 
-    rowsCases =
-      [("abcaaabbb", "abca3b3"), ("abcd", "abcd"), ("aaabaaaaccaaaaba", "a3ba4c2a4ba")]
+    rowsCases = zip [1 .. 8] [0, 1, 1, 2, 3, 5, 8, 13]

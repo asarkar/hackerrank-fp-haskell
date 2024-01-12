@@ -1,12 +1,12 @@
-module Recursion.SuperDigitSpec (spec) where
+module Recursion.SumOfPowersSpec (spec) where
 
 import Data.Foldable as F
-import Recursion.SuperDigit
+import Recursion.SumOfPowers
 import Test.Hspec
 
 spec :: Spec
 -- for_ :: (Foldable t, Applicative f) => t a -> (a -> f b) -> f ()
-spec = describe "calculates the super digit of the given number" $ F.for_ rowsCases rowsTest
+spec = describe "counts the number of ways x = ∑k^n, where x and n are given, and k >= 1" $ F.for_ rowsCases rowsTest
   where
     {-
     it :: (HasCallStack, Example a) => String -> a -> SpecWith (Arg a)
@@ -16,12 +16,10 @@ spec = describe "calculates the super digit of the given number" $ F.for_ rowsCa
     - a textual description of a desired behavior
     - an example for that behavior
     -}
-    rowsTest (n, k, expected) = it description assertion
+    rowsTest (x, n, expected) = it description assertion
       where
-        description = concat $ replicate (fromInteger k) (show n)
-        assertion = superDigit [n, k] `shouldBe` expected
+        description = show (x, n)
+        assertion = sumOfPowers x n `shouldBe` expected
 
     rowsCases =
-      [ (9875, 1, 2),
-        (148, 3, 3)
-      ]
+      [(100, 2, 3), (100, 3, 1)]

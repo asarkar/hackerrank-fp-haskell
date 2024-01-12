@@ -8,6 +8,16 @@ import qualified Data.Function as F
 import qualified Data.List as L
 import qualified Data.Ord as O
 import qualified Data.Tuple as T
+import qualified Text.Printf as P
+
+main :: IO ()
+main = do
+  _ <- readLn :: IO Int
+  content <- getContents
+  let points = (map (((\[x, y] -> (x, y)) . map (read :: String -> Int)) . words) . lines) content
+      ans = solve points
+
+  P.printf "%.1f\n" ans
 
 type Point = (Int, Int)
 
@@ -19,7 +29,7 @@ that encloses all of the points.
 Alternatively, it is the smallest area convex polygon enlosing all of
 the points.
 
-Implementation of "Graham scan" algorithm:
+Implementation of the "Graham scan" algorithm:
 1. Find the point p with the smallest y-coordinate.
 2. Sort all the points by polar angle from p.
 3. Iterate over the points in sorted order, discarding when a clockwise

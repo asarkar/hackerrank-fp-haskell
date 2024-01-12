@@ -3,6 +3,14 @@
 module Recursion.PrefixCompression where
 
 import Control.Arrow ((&&&))
+import qualified Control.Monad as M
+
+main :: IO ()
+main = do
+  s <- getLine
+  t <- getLine
+  M.forM_ (compress s t) $ \(i, xs) -> do
+    putStrLn $ show i ++ " " ++ xs
 
 compress :: String -> String -> [(Int, String)]
 compress = (map (length &&& id) .) . go []
