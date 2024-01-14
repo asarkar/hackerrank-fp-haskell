@@ -31,6 +31,8 @@ My solutions to [HackerRank Functional Programming code challenges](https://www.
 | [Super Digit](problems/Recursion/super-digit.pdf) | Medium | [link](src/Recursion/SuperDigit.hs) |
 | [Convex Hull](problems/Recursion/convex-hull.pdf) | Medium | [link](src/Recursion/ConvexHull.hs) |
 | [Concave Polygon](problems/Recursion/concave-polygon.pdf) | Medium | |
+| [Sierpinski triangles](problems/Recursion/sierpinski-triangles.pdf) | Advanced | [link](src/Recursion/SierpinskiTriangle.hs) |
+| [Recursive Trees](problems/Recursion/fractal-trees.pdf) | Advanced | [link](src/Recursion/FractalTrees.hs) |
 
 ## Running tests
 

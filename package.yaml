@@ -49,6 +49,7 @@ library:
   source-dirs: src
   dependencies:
   - containers
+  # - vector
 
   # executables:
   #   hackerrank-fp-haskell:

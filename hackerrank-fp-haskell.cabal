@@ -31,9 +31,11 @@ library
       Recursion.ConvexHull
       Recursion.Fibonacci
       Recursion.FilterElements
+      Recursion.FractalTrees
       Recursion.GCD
       Recursion.PascalsTriangle
       Recursion.PrefixCompression
+      Recursion.SierpinskiTriangle
       Recursion.StrCompression
       Recursion.StrMingling
       Recursion.StrPermutation
@@ -61,9 +63,11 @@ test-suite hackerrank-fp-haskell
       Recursion.ConvexHullSpec
       Recursion.FibonacciSpec
       Recursion.FilterElementsSpec
+      Recursion.FractalTreesSpec
       Recursion.GCDSpec
       Recursion.PascalsTriangleSpec
       Recursion.PrefixCompressionSpec
+      Recursion.SierpinskiTriangleSpec
       Recursion.StrCompressionSpec
       Recursion.StrMinglingSpec
       Recursion.StrPermutationSpec
