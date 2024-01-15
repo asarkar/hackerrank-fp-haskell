@@ -34,6 +34,12 @@ My solutions to [HackerRank Functional Programming code challenges](https://www.
 | [Sierpinski triangles](problems/Recursion/sierpinski-triangles.pdf) | Advanced | [link](src/Recursion/SierpinskiTriangle.hs) |
 | [Recursive Trees](problems/Recursion/fractal-trees.pdf) | Advanced | [link](src/Recursion/FractalTrees.hs) |
 
+### Functional Structures
+
+| Problem                 | Difficulty | Solution |
+|-------------------------|------------|----------|
+| [Lists and GCD](problems/FunctionalStructures/lists-and-gcd.pdf) | Easy | [link](src/FunctionalStructures/GCD.hs)
+
 ## Running tests
 
 ```

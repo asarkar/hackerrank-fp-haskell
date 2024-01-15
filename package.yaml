@@ -49,16 +49,6 @@ library:
   source-dirs: src
   dependencies:
   - containers
-  # - vector
-
-  # executables:
-  #   hackerrank-fp-haskell:
-  #     main:                Main.hs
-  #     source-dirs:         app
-  #     ghc-options:
-  #     - -threaded
-  #     - -rtsopts
-  #     - -with-rtsopts=-N
 
 tests:
   hackerrank-fp-haskell:

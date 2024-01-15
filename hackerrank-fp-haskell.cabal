@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      FunctionalStructures.GCD
       Introduction.FilterArray
       Introduction.HelloWorldN
       Recursion.ColorSeq
@@ -58,6 +59,7 @@ test-suite hackerrank-fp-haskell
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      FunctionalStructures.GCDSpec
       Introduction.FilterArraySpec
       Recursion.ColorSeqSpec
       Recursion.ConvexHullSpec
